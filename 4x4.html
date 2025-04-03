@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SLIDING PUZZLE</title>
+    <link rel="icon" href="favicon.png" type="image/png">
+    <link rel="stylesheet" href="4x4.css">
+    <script src="4x4.js"></script>
+
+</head>
+<body>
+    <h1 id="title">Sliding Puzzle!</h1>
+
+    <div class="puzzle-container">
+        <button id="switch">Switch to 3x3</button>
+
+        <div class="puzzle">
+            <div class="cell" data-index="0" >1</div>
+            <div class="cell" data-index="1" >2</div>
+            <div class="cell" data-index="2" >3</div>
+            <div class="cell" data-index="3" >4</div>
+            <div class="cell" data-index="4" >5</div>
+            <div class="cell" data-index="5" >6</div>
+            <div class="cell" data-index="6" >7</div>
+            <div class="cell" data-index="7" >8</div>
+            <div class="cell" data-index="8" >9</div>
+            <div class="cell" data-index="9" >10</div>
+            <div class="cell" data-index="10" >11</div>
+            <div class="cell" data-index="11" >12</div>
+            <div class="cell" data-index="12" >13</div>
+            <div class="cell" data-index="13" >14</div>
+            <div class="cell" data-index="14" >15</div>
+            <div class="cell empty" data-index="15" ></div>
+        </div>
+
+        <button id="shuffle-button">Shuffle</button>
+        <div id="timer">Time: 0s</div>
+        <div id="move-count">Moves: 0</div>
+        <div id="best-score">
+            <p>Best Time: <span id="best-time"></span></p>
+            <p>Least Moves: <span id="best-moves"></span></p>
+        </div>
+        <div id="win-message" class="hidden">Congratulations!</div>
+    </div>
+    <div id="confetti-container"></div>
+</body>
+</html>
