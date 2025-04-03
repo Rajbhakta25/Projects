@@ -1,5 +1,11 @@
 document.addEventListener("DOMContentLoaded",()=>{
-    localStorage.clear();
+
+    const switchButton = document.getElementById("switch");
+
+    switchButton.addEventListener("click", () => {
+        window.location.href = '4x4.html';
+    });
+
     const cells = [...document.querySelectorAll(".cell")];
     const puzzle = document.querySelector(".puzzle");
     const shuffleButton = document.getElementById("shuffle-button");
@@ -17,7 +23,7 @@ document.addEventListener("DOMContentLoaded",()=>{
     if (bestTime) {
         bestTimeDisplay.textContent = `${bestTime} seconds`;
     }
-
+    
     if (bestMoves) {
         bestMovesDisplay.textContent = `${bestMoves}`;
     }
@@ -48,13 +54,13 @@ document.addEventListener("DOMContentLoaded",()=>{
         if (!bestTime || elapsedTime < bestTime) {
             bestTime = elapsedTime;
             bestTimeDisplay.textContent = bestTime + "s";
-            localStorage.setItem('bestTime', bestTime);
+            localStorage.setItem('bestTime3', bestTime);
         }
 
         if (!bestMoves || moveCount < bestMoves) {
             bestMoves = moveCount;
             bestMovesDisplay.textContent = bestMoves;
-            localStorage.setItem('bestMoves', bestMoves);
+            localStorage.setItem('bestMoves3', bestMoves);
         }
     };
 
