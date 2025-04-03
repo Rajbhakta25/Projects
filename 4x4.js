@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded",()=>{
     const switchButton = document.getElementById("switch");
 
     switchButton.addEventListener("click", () => {
-        window.location.href = '/';
+        window.location.href = 'index.html';
     });
 
     const cells = [...document.querySelectorAll(".cell")];
